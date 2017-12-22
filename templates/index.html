@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mooc project1</title>
+
+  </head>
+  <body>
+    <h2>MOOC project 1</h2>
+    <div id="entries" class="container">
+        <h4>Entries</h4>
+        {% for entry in entries %}
+        <div>{{ entry.title }}</div>
+        {% endfor %}
+    </div>
+    <div id="add_form" class="container">
+        <h4>Add new entry</h4>
+        <form action="/entries" method="POST">
+        <p>Title: <input type="text" name="title"/></p>
+        <input type="submit" value="Submit"/>
+        </form>
+    </div>
+  </body>
+</html>
