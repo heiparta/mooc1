@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block navi %}
+{% endblock %}
+{% block content %}
+    <div id="login_form" class="container">
+        <h4>Login</h4>
+        <form action="/login" method="POST">
+        <p>Username: <input type="text" name="username"/></p>
+        <p>Password: <input type="password" name="password"/></p>
+        <input type="submit" value="Submit"/>
+        </form>
+    </div>
+{% endblock %}
